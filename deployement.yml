@@ -23,10 +23,10 @@ selector:
     type: fornt-end
 
 
-kubectl apply -f deployment-defination.yml
+#kubectl apply -f deployment-defination.yml
 
-kubectl get deployments
+#kubectl get deployments
 
-kubectl rollout status deployment/myapp-deployment
+#kubectl rollout status deployment/myapp-deployment
 
-kubectl rollout history deployments
+#kubectl rollout history deployments
