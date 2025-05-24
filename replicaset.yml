@@ -1,0 +1,27 @@
+apiVersion: v2.1
+kind: ReplicaSet
+metadata:
+  name: my-replicaset
+  labels:
+    app: myapp
+spec:
+  replicas: 3  # Number of pod copies
+  selector:
+    matchLabels:
+      app: myapp
+      type: front-end
+  template:
+    metadata:
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+          ports:
+            - containerPort: 80
+
+#kubectl apply -f replicaset.yml
+#kubectl get rs
+#kubectl describe name
